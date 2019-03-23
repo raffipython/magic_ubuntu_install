@@ -88,4 +88,15 @@ apt install android-sdk
 cp /root/magisk/licenses/* /usr/lib/android-sdk/licenses/
 
 cd /magisk/Magisk
-./build.py -v all
+#./build.py -v all
+./build.py -v magisk      # good
+./build.py -v magiskinit  # good
+./build.py -v magiskboot  # good
+./build.py -v busybox     # NOT GOOD
+
+
+
+
+
+
+
