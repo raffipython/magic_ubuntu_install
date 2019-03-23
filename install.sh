@@ -50,6 +50,8 @@ cd ~/magisk
 wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 unzip sdk-tools-linux-4333796.zip 
 export PATH=$PATH:/root/magisk/tools/bin
+
+# in sdkmanager file
 # REPLACE LINE 31 DEFAULT_JVM with this, basically appending -XX stuff 
 ## DEFAULT_JVM_OPTS='"-Dcom.android.sdklib.toolsdir=$APP_HOME" -XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 
@@ -71,6 +73,8 @@ sdkmanager --no_https "platforms;android-28"
 export JVM_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 
 
+##########################
+# MAYBE NOT NEEDED
 ~/magisk/tools/android update sdk --no-ui --all --filter "android-28"
 ~/magisk/tools/android update sdk --no-ui --all --filter "build-tools;28.0.3"
 
@@ -78,6 +82,9 @@ mv /usr/lib/android-sdk/tools/bin/sdkmanager /usr/lib/android-sdk/tools/bin/sdkm
 ln -s /root/magisk/tools/bin/sdkmanager /usr/lib/android-sdk/tools/bin/sdkmanager
 apt autoremove android-sdk
 apt install android-sdk
+##########################
+
+
 cp /root/magisk/licenses/* /usr/lib/android-sdk/licenses/
 
 cd /magisk/Magisk
